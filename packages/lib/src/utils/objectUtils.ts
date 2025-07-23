@@ -1,4 +1,4 @@
-export function hasOwn<T, K extends keyof T>(obj: T, key: PropertyKey): key is K {
+export function hasOwn<T extends object>(obj: T, key: PropertyKey): key is keyof T {
   return Object.prototype.hasOwnProperty.call(obj, key);
 }
 
